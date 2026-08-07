@@ -25,6 +25,14 @@ export const orders = [
   { ref: "SOH-1047", customer: "Nomsa Zulu", email: "nomsaz@gmail.com", phone: "071 550 3382", date: "12 Jul 2026", total: 275, status: "Collected", method: "Delivery", items: [{ name: "Cooking apron", qty: 1, price: 180 }, { name: "Oven mitt", qty: 1, price: 95 }] },
 ];
 
+// Prototype only: stands in for whoever is "logged in" as a customer,
+
+export const currentUser = {
+  name: "Thandi Mokoena",
+  email: "thandi.mokoena@gmail.com",
+  phone: "072 418 9903",
+};
+
 export const adminUsers = [
   { id: 1, name: "Heather Liebenberg", email: "heather@seedofhope.org.za", added: "02 Jul 2026" },
   { id: 2, name: "Nomsa Dlamini", email: "nomsa@seedofhope.org.za", added: "08 Jul 2026" },

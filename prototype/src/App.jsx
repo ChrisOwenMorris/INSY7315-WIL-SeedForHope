@@ -15,6 +15,15 @@ import Contact from './pages/public/Contact.jsx'
 import Privacy from './pages/public/Privacy.jsx'
 import Terms from './pages/public/Terms.jsx'
 
+// Customer views
+import Home from './pages/customer/Home.jsx'
+import Shop from './pages/customer/Shop.jsx'
+import ProductDetail from './pages/customer/ProductDetail.jsx'
+import OrdersList from './pages/customer/OrdersList.jsx'
+import CustomerOrderDetail from './pages/customer/OrderDetail.jsx'
+import Profile from './pages/customer/Profile.jsx'
+import ChangePassword from './pages/customer/ChangePassword.jsx'
+
 function App() {
   return (
     <Routes>
@@ -31,13 +40,23 @@ function App() {
       </Route>
 
       <Route element={<PublicLayout />}>
+        {/* Customer pages */}
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/orders" element={<OrdersList />} />
+        <Route path="/orders/:ref" element={<CustomerOrderDetail />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile/password" element={<ChangePassword />} />
+
+        {/* Existing public pages */}
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
       </Route>
 
-      {/* Home page ("/") is owned by another team member (shop/cart/checkout). Redirect to Contact for now. */}
-      <Route path="/" element={<Navigate to="/contact" replace />} />
+      {/* Catch-all */}
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )
 }
