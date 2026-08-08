@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/paper">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/orders_title"
+            android:textAppearance="@style/TextAppearance.SeedOfHope.H1" />
+
+        <TextView
+            android:id="@+id/tv_order_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.SeedOfHope.Small"
+            tools:text="7 orders" />
+
+        <!-- Filter chips are visual only; they do not filter the list below. -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:scrollbars="none"
+            android:clipToPadding="false">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:chipSpacingHorizontal="8dp">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_all"
+                    style="@style/Widget.SeedOfHope.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:checked="true"
+                    android:text="@string/filter_all" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_paid"
+                    style="@style/Widget.SeedOfHope.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/filter_paid" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_packed"
+                    style="@style/Widget.SeedOfHope.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/filter_packed" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_ready"
+                    style="@style/Widget.SeedOfHope.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/filter_ready" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_collected"
+                    style="@style/Widget.SeedOfHope.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/filter_collected" />
+
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_orders"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="16dp" />
+
+</LinearLayout>
