@@ -92,4 +92,14 @@
         android:label="Admin users"
         tools:layout="@layout/screen_team_list" />
 
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="za.org.seedofhope.market.ui.CartFragment"
+        android:label="Cart"
+        tools:layout="@layout/screen_cart">
+        <action
+            android:id="@+id/action_cart_to_signIn"
+            app:destination="@id/adminSignInFragment" />
+    </fragment>
+
 </navigation>

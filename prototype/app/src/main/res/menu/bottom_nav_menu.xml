@@ -16,4 +16,8 @@
         android:id="@+id/teamListFragment"
         android:icon="@drawable/ic_people"
         android:title="@string/nav_admin_users" />
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/nav_settings" />
 </menu>

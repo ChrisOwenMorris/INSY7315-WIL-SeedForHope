@@ -22,6 +22,31 @@
     <string name="login_button">Log in</string>
     <string name="login_prefill_email">heather@seedofhope.org.za</string>
     <string name="login_prefill_password">••••••••</string>
+    <string name="login_market_title">Seed of Hope Marketplace</string>
+    <string name="login_welcome_back">Welcome back</string>
+    <string name="login_or">OR</string>
+    <string name="login_create_account">Create an account</string>
+    <string name="login_biometric">Sign in with biometrics</string>
+
+    <!-- Forgot Password -->
+    <string name="forgot_password_title">Forgot your password?</string>
+    <string name="forgot_password_subtitle">Enter your email address and we\'ll send you instructions to reset your password.</string>
+    <string name="forgot_password_instruction">Enter the email address associated with your account.</string>
+    <string name="forgot_password_send_button">Send reset instructions</string>
+    <string name="forgot_password_back_to_login">Back to login</string>
+
+    <!-- Reset Password Sent Screen -->
+    <string name="reset_sent_title">Check your email</string>
+    <string name="reset_sent_body">We\'ve sent a password reset link to your email address.</string>
+    <string name="reset_sent_button">Back to login</string>
+
+    <!-- Register Screen -->
+    <string name="register_title">Create an account</string>
+    <string name="register_last_name_label">Last name</string>
+    <string name="register_confirm_password_label">Confirm password</string>
+    <string name="register_terms_consent">I agree to the Terms and Conditions</string>
+    <string name="register_button">Create account</string>
+    <string name="register_already_have_account">Already have an account? Log in</string>
 
     <!-- Dashboard -->
     <string name="dashboard_greeting">Good morning, Heather</string>
@@ -109,6 +134,18 @@
     <string name="order_email_notice">The customer is emailed automatically when the status changes.</string>
     <string name="order_print_slip">Print packing slip</string>
 
+    <!-- Order Confirmation -->
+    <string name="order_confirmed_title">Order confirmed</string>
+    <string name="order_confirmed_thanks">Thank you for supporting Seed of Hope.</string>
+    <string name="order_confirmed_ref_label">Order Reference</string>
+    <string name="order_confirmed_sample_ref">#SOH-12345</string>
+    <string name="order_confirmed_total_label">Amount Paid</string>
+    <string name="order_confirmed_status_label">Status</string>
+    <string name="order_confirmed_status_paid">Paid</string>
+    <string name="order_confirmed_email_notice">A confirmation email has been sent to your inbox.</string>
+    <string name="order_confirmed_view_button">View order details</string>
+    <string name="order_confirmed_continue_button">Continue shopping</string>
+
     <!-- Admin users -->
     <string name="admin_users_title">Admin users</string>
     <string name="admin_users_subtitle">People who can sign in to manage the shop.</string>
@@ -116,4 +153,53 @@
     <string name="admin_users_added">Added %1$s</string>
     <string name="admin_users_remove">Remove</string>
     <string name="admin_users_info">Everyone listed here has full access to products, orders and admin users. There are no separate permission levels.</string>
+
+    <!-- Cart -->
+    <string name="cart_title">Your Cart</string>
+    <string name="cart_empty">Your cart is empty</string>
+    <string name="cart_item_quantity">Qty: %1$d</string>
+    <string name="cart_item_total">Total: R%1$.2f</string>
+    <string name="cart_summary_title">Order Summary</string>
+    <string name="cart_subtotal">Subtotal</string>
+    <string name="cart_fees">Fees</string>
+    <string name="cart_total">Total</string>
+    <string name="cart_checkout">Proceed to Checkout</string>
+    <string name="cart_already_have_account">Already have an account? Log in to continue.</string>
+    <string name="cart_new_to_seed">New to Seed of Hope? Create an account to complete your purchase.</string>
+    <string name="cart_login">Log in</string>
+    <string name="cart_signup">Sign up</string>
+    <string name="cart_remove">Remove</string>
+    <string name="login">Login</string>
+    <string name="seed_of_hope">Seed of Hope</string>
+    <string name="r350_00">R350.00</string>
+    <string name="cart_hi_user">Hi, %1$s</string>
+
+    <!-- Checkout -->
+    <string name="checkout_title">Checkout</string>
+    <string name="checkout_step_buyer">Buyer Information</string>
+    <string name="checkout_step_summary">Order Summary</string>
+    <string name="checkout_step_payment">Payment</string>
+    <string name="checkout_payment_notice">You will be securely redirected to our payment provider to complete your payment.</string>
+    <string name="checkout_step_order">Place Order</string>
+    <string name="checkout_proceed_button">Proceed to Payment</string>
+    <string name="register_first_name_label">First name</string>
+    <string name="register_phone_label">Phone number</string>
+
+    <!-- Biometric Setup -->
+    <string name="biometric_title">Set up biometric login</string>
+    <string name="biometric_subtitle">Use your fingerprint or face to sign in quickly and securely.</string>
+    <string name="biometric_enable_button">Enable biometric login</string>
+    <string name="biometric_later_button">Maybe later</string>
+
+    <!-- Supporter Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_shop">Shop</string>
+    <string name="nav_cart">Cart</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_biometric_label">Biometric Login</string>
+    <string name="settings_biometric_desc">Use fingerprint or face ID to sign in</string>
+
 </resources>
