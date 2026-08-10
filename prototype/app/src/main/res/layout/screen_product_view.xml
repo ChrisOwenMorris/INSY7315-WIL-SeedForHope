@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/paper">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_row_top_divider"
+        android:paddingHorizontal="4dp">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="@string/nav_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/product_view_title"
+            android:textAppearance="@style/TextAppearance.SeedOfHope.H3" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_not_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/product_not_found"
+            android:textAppearance="@style/TextAppearance.SeedOfHope.H2"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:id="@+id/scroll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/product_last_updated"
+                    android:textAppearance="@style/TextAppearance.SeedOfHope.Caption" />
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.SeedOfHope.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/product_photo_label"
+                            android:textColor="@color/ink"
+                            android:textStyle="bold"
+                            android:textAppearance="@style/TextAppearance.SeedOfHope.Small" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_thumbnail_placeholder" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.SeedOfHope.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:enabled="false"
+                            android:hint="@string/product_name_label">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:enabled="false" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.SeedOfHope.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:enabled="false"
+                            android:hint="@string/product_description_label">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_description"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minLines="4"
+                                android:gravity="top|start"
+                                android:enabled="false"
+                                android:inputType="textMultiLine" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.SeedOfHope.TextInputLayout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:hint="@string/product_price_label">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_price"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="48dp"
+                                    android:enabled="false"
+                                    android:inputType="number" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <View
+                                android:layout_width="12dp"
+                                android:layout_height="1dp" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.SeedOfHope.TextInputLayout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:hint="@string/product_stock_label">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_stock"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="48dp"
+                                    android:enabled="false"
+                                    android:inputType="number" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/product_price_caption"
+                                android:textAppearance="@style/TextAppearance.SeedOfHope.Caption" />
+
+                            <View
+                                android:layout_width="12dp"
+                                android:layout_height="1dp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/product_stock_caption"
+                                android:textAppearance="@style/TextAppearance.SeedOfHope.Caption" />
+                        </LinearLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.SeedOfHope.TextInputLayout.ExposedDropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:enabled="false"
+                            android:hint="@string/product_category_label">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/act_category"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:enabled="false"
+                                android:inputType="none" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>
