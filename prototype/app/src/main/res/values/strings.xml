@@ -116,4 +116,64 @@
     <string name="admin_users_added">Added %1$s</string>
     <string name="admin_users_remove">Remove</string>
     <string name="admin_users_info">Everyone listed here has full access to products, orders and admin users. There are no separate permission levels.</string>
+    <!-- ================= Andisa — customer screens ================= -->
+
+    <!-- Home -->
+    <string name="home_eyebrow">Sewn with care</string>
+    <string name="home_headline">Every purchase supports Seed of Hope.</string>
+    <string name="home_subtext">Aprons, bags and homeware sewn by our sewing programme — sold online, with every purchase fairly paying our makers.</string>
+    <string name="home_shop_now">Shop now</string>
+    <string name="home_impact_1_title">Made by hand</string>
+    <string name="home_impact_1_body">Every item is sewn by our sewing programme.</string>
+    <string name="home_impact_2_title">Proceeds stay local</string>
+    <string name="home_impact_2_body">What you spend supports Seed of Hope directly.</string>
+    <string name="home_impact_3_title">Fair pay for makers</string>
+    <string name="home_impact_3_body">Every sale helps fairly pay our sewing programme.</string>
+    <string name="home_featured_title">Featured products</string>
+    <string name="home_see_all">See all</string>
+
+    <!-- Shop -->
+    <string name="shop_title">Shop the collection</string>
+    <string name="shop_subtitle">Browse our handmade products by category.</string>
+    <string name="shop_empty_category">No products in this category yet.</string>
+    <string name="category_all">All</string>
+    <string name="category_kitchen">Kitchen</string>
+    <string name="category_bags">Bags</string>
+    <string name="category_home_decor">Home decor</string>
+
+    <!-- Product detail -->
+    <string name="product_quantity_label">Quantity</string>
+    <string name="product_decrease_quantity">Decrease quantity</string>
+    <string name="product_increase_quantity">Increase quantity</string>
+    <string name="product_add_to_cart">Add to cart</string>
+    <string name="product_sold_out_message">This item is currently sold out. Check back soon, or browse similar items in this category.</string>
+    <string name="product_maker_note">Made by our sewing programme. Your purchase helps pay our makers fairly.</string>
+
+    <!-- My orders -->
+    <string name="my_orders_title">My orders</string>
+    <string name="my_orders_empty_title">No orders yet</string>
+    <string name="my_orders_empty_body">Once you place an order, it\'ll show up here.</string>
+
+    <!-- Profile -->
+    <string name="profile_title">My profile</string>
+    <string name="profile_subtitle">Keep your details up to date so orders reach you.</string>
+    <string name="profile_name_label">Full name</string>
+    <string name="profile_email_label">Email address</string>
+    <string name="profile_phone_label">Phone number</string>
+    <string name="profile_change_password">Change password</string>
+    <string name="profile_save">Save changes</string>
+
+    <!-- Change password -->
+    <string name="change_password_title">Change password</string>
+    <string name="change_password_subtitle">Choose a new password for your account.</string>
+    <string name="change_password_current_label">Current password</string>
+    <string name="change_password_new_label">New password</string>
+    <string name="change_password_hint">At least 8 characters.</string>
+    <string name="change_password_confirm_label">Confirm new password</string>
+    <string name="change_password_submit">Update password</string>
+
+    <plurals name="my_orders_count">
+        <item quantity="one">%d order placed with your account</item>
+        <item quantity="other">%d orders placed with your account</item>
+    </plurals>
 </resources>

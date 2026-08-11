@@ -34,6 +34,10 @@
         <action
             android:id="@+id/action_home_to_orderView"
             app:destination="@id/orderViewFragment" />
+        <!-- TEMPORARY CUSTOMER APP TEST -->
+        <action
+            android:id="@+id/action_adminHome_to_customerHome"
+            app:destination="@id/homeFragment" />
     </fragment>
 
     <fragment
@@ -91,5 +95,103 @@
         android:name="za.org.seedofhope.market.ui.users.TeamList"
         android:label="Admin users"
         tools:layout="@layout/screen_team_list" />
+
+    <!-- ============ Andisa — customer screens ============ -->
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="za.org.seedofhope.market.ui.customer.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/screen_home">
+
+        <action
+            android:id="@+id/action_home_to_shop"
+            app:destination="@id/shopFragment" />
+
+        <action
+            android:id="@+id/action_home_to_product_detail"
+            app:destination="@id/productDetailFragment" />
+
+        <action
+            android:id="@+id/action_home_to_profile"
+            app:destination="@id/profileFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="za.org.seedofhope.market.ui.customer.ShopFragment"
+        android:label="Shop"
+        tools:layout="@layout/screen_shop">
+
+        <argument
+            android:name="category"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+
+        <action
+            android:id="@+id/action_shop_to_product_detail"
+            app:destination="@id/productDetailFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="za.org.seedofhope.market.ui.customer.ProductDetailFragment"
+        android:label="Product details"
+        tools:layout="@layout/screen_product_detail">
+
+        <argument
+            android:name="productId"
+            app:argType="integer" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/myOrdersFragment"
+        android:name="za.org.seedofhope.market.ui.customer.MyOrdersFragment"
+        android:label="My orders"
+        tools:layout="@layout/screen_my_orders">
+
+        <action
+            android:id="@+id/action_my_orders_to_order_detail"
+            app:destination="@id/customerOrderDetailFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/customerOrderDetailFragment"
+        android:name="za.org.seedofhope.market.ui.customer.OrderDetailFragment"
+        android:label="Order details"
+        tools:layout="@layout/screen_my_order_detail">
+
+        <argument
+            android:name="orderRef"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="za.org.seedofhope.market.ui.customer.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/screen_profile">
+
+        <action
+            android:id="@+id/action_profile_to_change_password"
+            app:destination="@id/changePasswordFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="za.org.seedofhope.market.ui.customer.ChangePasswordFragment"
+        android:label="Change password"
+        tools:layout="@layout/screen_change_password" />
+
+    <action
+        android:id="@+id/action_global_to_home"
+        app:destination="@id/homeFragment" />
 
 </navigation>
