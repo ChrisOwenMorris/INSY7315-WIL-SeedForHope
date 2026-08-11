@@ -1,0 +1,8 @@
+# Test output
+prototype/test-results/
+prototype/tests/
+
+# Android Studio / Gradle local files
+.idea/
+prototype/.gradle/
+prototype/local.properties
