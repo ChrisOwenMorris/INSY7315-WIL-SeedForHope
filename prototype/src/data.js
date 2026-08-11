@@ -27,11 +27,7 @@ export const orders = [
 
 // Prototype only: stands in for whoever is "logged in" as a customer,
 
-export const currentUser = {
-  name: "Thandi Mokoena",
-  email: "thandi.mokoena@gmail.com",
-  phone: "072 418 9903",
-};
+export const currentUser = null;
 
 export const adminUsers = [
   { id: 1, name: "Heather Liebenberg", email: "heather@seedofhope.org.za", added: "02 Jul 2026" },

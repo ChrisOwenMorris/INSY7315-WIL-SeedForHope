@@ -41,8 +41,8 @@ export default function PublicNavbar() {
             <User size={22} className="text-forest-700" />
           </Link>
 
-          {/* Cart is owned by another team member; leave untouched */}
-          <Link to="/" aria-label="Cart">
+          {/* Cart */}
+          <Link to="/cart" aria-label="Cart">
             <ShoppingCart size={22} className="text-forest-700" />
           </Link>
         </div>

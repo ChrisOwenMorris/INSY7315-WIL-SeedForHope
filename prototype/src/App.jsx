@@ -14,6 +14,14 @@ import AdminUsers from './pages/admin/AdminUsers.jsx'
 import Contact from './pages/public/Contact.jsx'
 import Privacy from './pages/public/Privacy.jsx'
 import Terms from './pages/public/Terms.jsx'
+import Login from './pages/public/Login.jsx'
+import CreateAccount from './pages/public/CreateAccount.jsx'
+import ForgotPassword from './pages/public/ForgotPassword.jsx'
+import ResetSent from './pages/public/ResetSent.jsx'
+import Cart from './pages/public/Cart.jsx'
+import Checkout from './pages/public/Checkout.jsx'
+import Payment from './pages/public/Payment.jsx'
+import OrderConfirmed from './pages/public/OrderConfirmed.jsx'
 
 // Customer views
 import Home from './pages/customer/Home.jsx'
@@ -50,6 +58,14 @@ function App() {
         <Route path="/profile/password" element={<ChangePassword />} />
 
         {/* Existing public pages */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/create-account" element={<CreateAccount />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-sent" element={<ResetSent />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/order-confirmed" element={<OrderConfirmed />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
