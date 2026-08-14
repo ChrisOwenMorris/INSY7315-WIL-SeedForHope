@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Seed of Hope Admin</string>
+
+    <!-- Common -->
+    <string name="org_name">Seed of Hope Community Development NPO</string>
+    <string name="nav_back">Back</string>
+    <string name="rand_prefix">R</string>
+
+    <!-- Bottom nav -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_products">Products</string>
+    <string name="nav_orders">Orders</string>
+    <string name="nav_admin_users">Admin users</string>
+
+    <!-- Login -->
+    <string name="login_title">Seed of Hope admin</string>
+    <string name="login_subtitle">Sign in to manage products and orders.</string>
+    <string name="login_email_label">Email address</string>
+    <string name="login_password_label">Password</string>
+    <string name="login_forgot_password">Forgot your password?</string>
+    <string name="login_button">Log in</string>
+    <string name="login_prefill_email">heather@seedofhope.org.za</string>
+    <string name="login_prefill_password">••••••••</string>
+    <string name="login_market_title">Seed of Hope Marketplace</string>
+    <string name="login_welcome_back">Welcome back</string>
+    <string name="login_or">OR</string>
+    <string name="login_create_account">Create an account</string>
+    <string name="login_biometric">Sign in with biometrics</string>
+
+    <!-- Forgot Password -->
+    <string name="forgot_password_title">Forgot your password?</string>
+    <string name="forgot_password_subtitle">Enter your email address and we\'ll send you instructions to reset your password.</string>
+    <string name="forgot_password_instruction">Enter the email address associated with your account.</string>
+    <string name="forgot_password_send_button">Send reset instructions</string>
+    <string name="forgot_password_back_to_login">Back to login</string>
+
+    <!-- Reset Password Sent Screen -->
+    <string name="reset_sent_title">Check your email</string>
+    <string name="reset_sent_body">We\'ve sent a password reset link to your email address.</string>
+    <string name="reset_sent_button">Back to login</string>
+
+    <!-- Register Screen -->
+    <string name="register_title">Create an account</string>
+    <string name="register_last_name_label">Last name</string>
+    <string name="register_confirm_password_label">Confirm password</string>
+    <string name="register_terms_consent">I agree to the Terms and Conditions</string>
+    <string name="register_button">Create account</string>
+    <string name="register_already_have_account">Already have an account? Log in</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_greeting">Good morning, Heather</string>
+    <string name="dashboard_subtitle">Here\'s what needs your attention today.</string>
+    <string name="stat_orders_to_pack">Orders to pack</string>
+    <string name="stat_ready_for_collection">Ready for collection</string>
+    <string name="stat_products_listed">Products listed</string>
+    <string name="stat_out_of_stock">Out of stock</string>
+    <string name="dashboard_recent_orders">Recent orders</string>
+    <string name="dashboard_see_all_orders">See all orders</string>
+    <string name="dashboard_col_reference">Reference</string>
+    <string name="dashboard_col_customer">Customer</string>
+    <string name="dashboard_col_date">Date</string>
+    <string name="dashboard_col_total">Total</string>
+    <string name="dashboard_col_status">Status</string>
+    <string name="dashboard_add_product">Add a new product</string>
+
+    <!-- Product list -->
+    <string name="products_title">All products</string>
+    <string name="products_count">%1$d products listed</string>
+    <string name="product_stock_count">%1$d in stock</string>
+    <string name="product_out_of_stock">Out of stock</string>
+    <string name="product_status_active">Active</string>
+    <string name="product_status_sold_out">Sold out</string>
+    <string name="products_add_button">Add a new product</string>
+
+    <!-- Product new / edit -->
+    <string name="product_new_title">Add a new product</string>
+    <string name="product_edit_title">Edit product</string>
+    <string name="product_view_title">Product details</string>
+    <string name="product_not_found">Product not found</string>
+    <string name="product_photo_label">Product photo</string>
+    <string name="product_photo_add">Add a photo</string>
+    <string name="product_photo_hint">JPG or PNG, up to 5MB</string>
+    <string name="product_photo_replace">Replace photo</string>
+    <string name="product_name_label">Product name</string>
+    <string name="product_name_hint">e.g. Cooking apron</string>
+    <string name="product_description_label">Description</string>
+    <string name="product_description_hint">Describe the item, the fabric and any care instructions.</string>
+    <string name="product_price_label">Price (R)</string>
+    <string name="product_price_hint">180</string>
+    <string name="product_price_caption">Enter the amount in Rand, without the R.</string>
+    <string name="product_stock_label">Stock quantity</string>
+    <string name="product_stock_hint">10</string>
+    <string name="product_stock_caption">How many of this item you currently have.</string>
+    <string name="product_category_label">Category</string>
+    <string name="product_last_updated">Last updated 24 Jul 2026</string>
+    <string name="product_cancel">Cancel</string>
+    <string name="product_save_new">Save product</string>
+    <string name="product_save_changes">Save changes</string>
+    <string name="product_mark_sold_out">Mark as sold out</string>
+    <string name="product_deactivate">Deactivate product</string>
+    <string name="product_deactivate_caption">Deactivating hides the item from the shop. Past orders are not affected.</string>
+
+    <!-- Order list -->
+    <string name="orders_title">All orders</string>
+    <string name="orders_count">%1$d orders</string>
+    <string name="filter_all">All (7)</string>
+    <string name="filter_paid">Paid (2)</string>
+    <string name="filter_packed">Packed (2)</string>
+    <string name="filter_ready">Ready (2)</string>
+    <string name="filter_collected">Collected (1)</string>
+    <string name="order_item_count">%1$d items</string>
+
+    <!-- Order detail -->
+    <string name="order_detail_title">Order details</string>
+    <string name="order_placed_on">Placed on %1$s</string>
+    <string name="order_step_paid">Paid</string>
+    <string name="order_step_packed">Packed</string>
+    <string name="order_step_ready">Ready</string>
+    <string name="order_step_collected">Collected</string>
+    <string name="order_customer_section">Customer</string>
+    <string name="order_delivery_section">Delivery method</string>
+    <string name="order_items_section">Items</string>
+    <string name="order_items_header">Items in this order</string>
+    <string name="order_subtotal">Subtotal</string>
+    <string name="order_delivery">Delivery</string>
+    <string name="order_delivery_free">Free</string>
+    <string name="order_total">Total</string>
+    <string name="order_update_status_section">Update status</string>
+    <string name="order_mark_packed">Mark as packed</string>
+    <string name="order_mark_ready">Mark as ready for collection</string>
+    <string name="order_mark_collected">Mark as collected</string>
+    <string name="order_complete">Order complete</string>
+    <string name="order_email_notice">The customer is emailed automatically when the status changes.</string>
+    <string name="order_print_slip">Print packing slip</string>
+
+    <!-- Order Confirmation -->
+    <string name="order_confirmed_title">Order confirmed</string>
+    <string name="order_confirmed_thanks">Thank you for supporting Seed of Hope.</string>
+    <string name="order_confirmed_ref_label">Order Reference</string>
+    <string name="order_confirmed_sample_ref">#SOH-12345</string>
+    <string name="order_confirmed_total_label">Amount Paid</string>
+    <string name="order_confirmed_status_label">Status</string>
+    <string name="order_confirmed_status_paid">Paid</string>
+    <string name="order_confirmed_email_notice">A confirmation email has been sent to your inbox.</string>
+    <string name="order_confirmed_view_button">View order details</string>
+    <string name="order_confirmed_continue_button">Continue shopping</string>
+
+    <!-- Admin users -->
+    <string name="admin_users_title">Admin users</string>
+    <string name="admin_users_subtitle">People who can sign in to manage the shop.</string>
+    <string name="admin_users_add">Add an admin user</string>
+    <string name="admin_users_added">Added %1$s</string>
+    <string name="admin_users_remove">Remove</string>
+    <string name="admin_users_info">Everyone listed here has full access to products, orders and admin users. There are no separate permission levels.</string>
+    <!-- ================= Andisa — customer screens ================= -->
+
+    <!-- Home -->
+    <string name="home_eyebrow">Sewn with care</string>
+    <string name="home_headline">Every purchase supports Seed of Hope.</string>
+    <string name="home_subtext">Aprons, bags and homeware sewn by our sewing programme — sold online, with every purchase fairly paying our makers.</string>
+    <string name="home_shop_now">Shop now</string>
+    <string name="home_impact_1_title">Made by hand</string>
+    <string name="home_impact_1_body">Every item is sewn by our sewing programme.</string>
+    <string name="home_impact_2_title">Proceeds stay local</string>
+    <string name="home_impact_2_body">What you spend supports Seed of Hope directly.</string>
+    <string name="home_impact_3_title">Fair pay for makers</string>
+    <string name="home_impact_3_body">Every sale helps fairly pay our sewing programme.</string>
+    <string name="home_featured_title">Featured products</string>
+    <string name="home_see_all">See all</string>
+
+    <!-- Shop -->
+    <string name="shop_title">Shop the collection</string>
+    <string name="shop_subtitle">Browse our handmade products by category.</string>
+    <string name="shop_empty_category">No products in this category yet.</string>
+    <string name="category_all">All</string>
+    <string name="category_kitchen">Kitchen</string>
+    <string name="category_bags">Bags</string>
+    <string name="category_home_decor">Home decor</string>
+
+    <!-- Product detail -->
+    <string name="product_quantity_label">Quantity</string>
+    <string name="product_decrease_quantity">Decrease quantity</string>
+    <string name="product_increase_quantity">Increase quantity</string>
+    <string name="product_add_to_cart">Add to cart</string>
+    <string name="product_sold_out_message">This item is currently sold out. Check back soon, or browse similar items in this category.</string>
+    <string name="product_maker_note">Made by our sewing programme. Your purchase helps pay our makers fairly.</string>
+
+    <!-- My orders -->
+    <string name="my_orders_title">My orders</string>
+    <string name="my_orders_empty_title">No orders yet</string>
+    <string name="my_orders_empty_body">Once you place an order, it\'ll show up here.</string>
+
+    <!-- Profile -->
+    <string name="profile_title">My profile</string>
+    <string name="profile_subtitle">Keep your details up to date so orders reach you.</string>
+    <string name="profile_name_label">Full name</string>
+    <string name="profile_email_label">Email address</string>
+    <string name="profile_phone_label">Phone number</string>
+    <string name="profile_change_password">Change password</string>
+    <string name="profile_save">Save changes</string>
+
+    <!-- Change password -->
+    <string name="change_password_title">Change password</string>
+    <string name="change_password_subtitle">Choose a new password for your account.</string>
+    <string name="change_password_current_label">Current password</string>
+    <string name="change_password_new_label">New password</string>
+    <string name="change_password_hint">At least 8 characters.</string>
+    <string name="change_password_confirm_label">Confirm new password</string>
+    <string name="change_password_submit">Update password</string>
+
+    <plurals name="my_orders_count">
+        <item quantity="one">%d order placed with your account</item>
+        <item quantity="other">%d orders placed with your account</item>
+    </plurals>
+
+    <!-- Cart -->
+    <string name="cart_title">Your Cart</string>
+    <string name="cart_empty">Your cart is empty</string>
+    <string name="cart_item_quantity">Qty: %1$d</string>
+    <string name="cart_item_total">Total: R%1$.2f</string>
+    <string name="cart_summary_title">Order Summary</string>
+    <string name="cart_subtotal">Subtotal</string>
+    <string name="cart_fees">Fees</string>
+    <string name="cart_total">Total</string>
+    <string name="cart_checkout">Proceed to Checkout</string>
+    <string name="cart_already_have_account">Already have an account? Log in to continue.</string>
+    <string name="cart_new_to_seed">New to Seed of Hope? Create an account to complete your purchase.</string>
+    <string name="cart_login">Log in</string>
+    <string name="cart_signup">Sign up</string>
+    <string name="cart_remove">Remove</string>
+    <string name="login">Login</string>
+    <string name="seed_of_hope">Seed of Hope</string>
+    <string name="r350_00">R350.00</string>
+    <string name="cart_hi_user">Hi, %1$s</string>
+
+    <!-- Checkout -->
+    <string name="checkout_title">Checkout</string>
+    <string name="checkout_step_buyer">Buyer Information</string>
+    <string name="checkout_step_summary">Order Summary</string>
+    <string name="checkout_step_payment">Payment</string>
+    <string name="checkout_payment_notice">You will be securely redirected to our payment provider to complete your payment.</string>
+    <string name="checkout_step_order">Place Order</string>
+    <string name="checkout_proceed_button">Proceed to Payment</string>
+    <string name="register_first_name_label">First name</string>
+    <string name="register_phone_label">Phone number</string>
+
+    <!-- Biometric Setup -->
+    <string name="biometric_title">Set up biometric login</string>
+    <string name="biometric_subtitle">Use your fingerprint or face to sign in quickly and securely.</string>
+    <string name="biometric_enable_button">Enable biometric login</string>
+    <string name="biometric_later_button">Maybe later</string>
+
+    <!-- Supporter Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_shop">Shop</string>
+    <string name="nav_cart">Cart</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_biometric_label">Biometric Login</string>
+    <string name="settings_biometric_desc">Use fingerprint or face ID to sign in</string>
+
+</resources>

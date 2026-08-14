@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="forest_900">#24402F</color>
+    <color name="forest_700">#2F5D43</color>
+    <color name="forest_500">#4A7C59</color>
+    <color name="sage_100">#DCE8D5</color>
+    <color name="paper">#F7F4EE</color>
+    <color name="white">#FFFFFF</color>
+    <color name="ink">#2B2A28</color>
+    <color name="ink_muted">#8A857D</color>
+    <color name="line">#E4E0D8</color>
+    <color name="danger">#A63D2F</color>
+
+    <color name="paid_bg">#DCE8D5</color>
+    <color name="paid_fg">#2F5D43</color>
+    <color name="packed_bg">#FFF3D6</color>
+    <color name="packed_fg">#8A6D1F</color>
+    <color name="ready_bg">#D9E8F5</color>
+    <color name="ready_fg">#2C5878</color>
+    <color name="done_bg">#E8E6E1</color>
+    <color name="done_fg">#6B6660</color>
+
+    <color name="white_60">#99FFFFFF</color>
+</resources>

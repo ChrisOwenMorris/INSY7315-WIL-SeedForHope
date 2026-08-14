@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_row_top_divider"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="12dp">
+
+    <TextView
+        android:id="@+id/tv_ref"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/forest_700"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.SeedOfHope.Small"
+        tools:text="SOH-1061" />
+
+    <TextView
+        android:id="@+id/tv_customer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.3"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/ink"
+        android:textAppearance="@style/TextAppearance.SeedOfHope.Small"
+        tools:text="Thandi Mokoena" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textAppearance="@style/TextAppearance.SeedOfHope.Small"
+        tools:text="27 Jul" />
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:gravity="end"
+        android:textColor="@color/ink"
+        android:textAppearance="@style/TextAppearance.SeedOfHope.Small"
+        tools:text="R180" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="4dp"
+        android:textAppearance="@style/TextAppearance.SeedOfHope.Caption"
+        android:textAllCaps="false"
+        tools:background="@drawable/bg_pill_paid"
+        tools:textColor="@color/paid_fg"
+        tools:text="Paid" />
+
+</LinearLayout>

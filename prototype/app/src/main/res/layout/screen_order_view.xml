@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/paper">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_row_top_divider"
+        android:paddingHorizontal="4dp">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="@string/nav_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/order_detail_title"
+            android:textAppearance="@style/TextAppearance.SeedOfHope.H3" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_ref"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.SeedOfHope.H1"
+                    tools:text="SOH-1058" />
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:textAppearance="@style/TextAppearance.SeedOfHope.Caption"
+                    tools:background="@drawable/bg_pill_packed"
+                    tools:textColor="@color/packed_fg"
+                    tools:text="Packed" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_placed_on"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="@style/TextAppearance.SeedOfHope.Small"
+                tools:text="Placed on 24 Jul 2026" />
+
+            <!-- Status tracker -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.SeedOfHope.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_gravity="top"
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="1" />
+
+                        <View
+                            android:id="@+id/line_1_2"
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="2"
+                            android:background="@color/line" />
+
+                        <View
+                            android:id="@+id/line_2_3"
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="2"
+                            android:background="@color/line" />
+
+                        <View
+                            android:id="@+id/line_3_4"
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="2"
+                            android:background="@color/line" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/circle_1"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:background="@drawable/bg_tracker_circle_filled">
+
+                                <ImageView
+                                    android:id="@+id/check_1"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_check"
+                                    android:contentDescription="@null" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/label_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="@string/order_step_paid"
+                                android:textAppearance="@style/TextAppearance.SeedOfHope.Caption" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/circle_2"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:background="@drawable/bg_tracker_circle_empty">
+
+                                <ImageView
+                                    android:id="@+id/check_2"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_check"
+                                    android:visibility="gone"
+                                    android:contentDescription="@null" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/label_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="@string/order_step_packed"
+                                android:textAppearance="@style/TextAppearance.SeedOfHope.Caption" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/circle_3"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:background="@drawable/bg_tracker_circle_empty">
+
+                                <ImageView
+                                    android:id="@+id/check_3"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_check"
+                                    android:visibility="gone"
+                                    android:contentDescription="@null" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/label_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="@string/order_step_ready"
+                                android:textAppearance="@style/TextAppearance.SeedOfHope.Caption" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/circle_4"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:background="@drawable/bg_tracker_circle_empty">
+
+                                <ImageView
+                                    android:id="@+id/check_4"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_check"
+                                    android:visibility="gone"
+                                    android:contentDescription="@null" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/label_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="@string/order_step_collected"
+                                android:textAppearance="@style/TextAppearance.SeedOfHope.Caption" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </FrameLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Customer -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/order_customer_section"
+                android:textAppearance="@style/TextAppearance.SeedOfHope.H3" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.SeedOfHope.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_customer_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.SeedOfHope.Body"
+                        tools:text="Thandi Mokoena" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_mail"
+                            app:tint="@color/ink_muted"
+                            android:contentDescription="@null" />
+
+                        <TextView
+                            android:id="@+id/tv_customer_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:textAppearance="@style/TextAppearance.SeedOfHope.Small"
+                            tools:text="thandi.mokoena@gmail.com" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_phone"
+                            app:tint="@color/ink_muted"
+                            android:contentDescription="@null" />
+
+                        <TextView
+                            android:id="@+id/tv_customer_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:textAppearance="@style/TextAppearance.SeedOfHope.Small"
+                            tools:text="072 418 9903" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Delivery method -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/order_delivery_section"
+                android:textAppearance="@style/TextAppearance.SeedOfHope.H3" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.SeedOfHope.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_delivery_method"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.SeedOfHope.Body"
+                        tools:text="Collection" />
+
+                    <TextView
+                        android:id="@+id/tv_delivery_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textAppearance="@style/TextAppearance.SeedOfHope.Small"
+                        tools:text="22 Chamberlain Road, Jacobs, Durban, 4052" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Items -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/order_items_section"
+                android:textAppearance="@style/TextAppearance.SeedOfHope.H3" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.SeedOfHope.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:textStyle="bold"
+                        android:background="@drawable/bg_row_bottom_divider"
+                        android:text="@string/order_items_header"
+                        android:textAppearance="@style/TextAppearance.SeedOfHope.Body" />
+
+                    <LinearLayout
+                        android:id="@+id/items_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_row_top_divider"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/order_subtotal"
+                                android:textAppearance="@style/TextAppearance.SeedOfHope.Small" />
+
+                            <TextView
+                                android:id="@+id/tv_subtotal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/TextAppearance.SeedOfHope.Small"
+                                tools:text="R260" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/order_delivery"
+                                android:textAppearance="@style/TextAppearance.SeedOfHope.Small" />
+
+                            <TextView
+                                android:id="@+id/tv_delivery_fee"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/TextAppearance.SeedOfHope.Small"
+                                tools:text="Free" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/order_total"
+                                android:textAppearance="@style/TextAppearance.SeedOfHope.H3" />
+
+                            <TextView
+                                android:id="@+id/tv_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/TextAppearance.SeedOfHope.H3"
+                                tools:text="R260" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
