@@ -1,4 +1,4 @@
-﻿import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useState } from 'react'
 import { currentUser as initialUser } from '../data.js'
 
 const AuthContext = createContext()
