@@ -13,9 +13,9 @@ import OrderList from './pages/admin/OrderList.jsx'
 import OrderDetail from './pages/admin/OrderDetail.jsx'
 import AdminUsers from './pages/admin/AdminUsers.jsx'
 
-import Home from './pages/public/Home.jsx'
-import Shop from './pages/public/Shop.jsx'
-import ProductDetail from './pages/public/ProductDetail.jsx'
+import Home from './pages/customer/Home.jsx'
+import Shop from './pages/customer/Shop.jsx'
+import ProductDetail from './pages/customer/ProductDetail.jsx'
 import Cart from './pages/public/Cart.jsx'
 import Checkout from './pages/public/Checkout.jsx'
 import Payment from './pages/public/Payment.jsx'
@@ -24,10 +24,10 @@ import Login from './pages/public/Login.jsx'
 import CreateAccount from './pages/public/CreateAccount.jsx'
 import ForgotPassword from './pages/public/ForgotPassword.jsx'
 import ResetSent from './pages/public/ResetSent.jsx'
-import Orders from './pages/public/Orders.jsx'
-import OrderTracking from './pages/public/OrderTracking.jsx'
-import Profile from './pages/public/Profile.jsx'
-import ChangePassword from './pages/public/ChangePassword.jsx'
+import Orders from './pages/customer/OrdersList.jsx'
+import OrderTracking from './pages/customer/OrderDetail.jsx'
+import Profile from './pages/customer/Profile.jsx'
+import ChangePassword from './pages/customer/ChangePassword.jsx'
 import Contact from './pages/public/Contact.jsx'
 import Privacy from './pages/public/Privacy.jsx'
 import Terms from './pages/public/Terms.jsx'
@@ -52,6 +52,7 @@ function App() {
           <Route element={<PublicLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/shop/:id" element={<ProductDetail />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
@@ -64,6 +65,7 @@ function App() {
             <Route path="/orders" element={<Orders />} />
             <Route path="/orders/:ref" element={<OrderTracking />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/profile/password" element={<ChangePassword />} />
             <Route path="/profile/change-password" element={<ChangePassword />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
