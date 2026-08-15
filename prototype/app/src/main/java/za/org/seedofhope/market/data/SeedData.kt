@@ -16,7 +16,8 @@ object SeedData {
     )
 
     data class AdminUser(
-        val id: Int, val name: String, val email: String, val added: String
+        val id: Int, val name: String, val email: String, val added: String,
+        val role: String = "Staff"
     )
 
     val products = listOf(
@@ -61,8 +62,8 @@ object SeedData {
     )
 
     val adminUsers = listOf(
-        AdminUser(1, "Heather Liebenberg", "heather@seedofhope.org.za", "02 Jul 2026"),
-        AdminUser(2, "Nomsa Dlamini", "nomsa@seedofhope.org.za", "08 Jul 2026")
+        AdminUser(1, "Heather Liebenberg", "heather@seedofhope.org.za", "02 Jul 2026", role = "Manager"),
+        AdminUser(2, "Nomsa Dlamini", "nomsa@seedofhope.org.za", "08 Jul 2026", role = "Staff")
     )
 
     val orgAddress = "22 Chamberlain Road, Jacobs, Durban, 4052"

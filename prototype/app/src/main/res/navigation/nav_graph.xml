@@ -34,7 +34,7 @@
         <action
             android:id="@+id/action_home_to_orderView"
             app:destination="@id/orderViewFragment" />
-        <!-- TEMPORARY CUSTOMER APP TEST -->
+        <!-- Storefront entry point: lets staff jump into the customer-facing app (Andisa's screens). -->
         <action
             android:id="@+id/action_adminHome_to_customerHome"
             app:destination="@id/homeFragment" />
@@ -96,6 +96,12 @@
         android:label="Admin users"
         tools:layout="@layout/screen_team_list" />
 
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="za.org.seedofhope.market.ui.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/screen_settings" />
+
     <!-- ============ Andisa — customer screens ============ -->
 
     <fragment
@@ -146,6 +152,10 @@
             android:name="productId"
             app:argType="integer" />
 
+        <action
+            android:id="@+id/action_productDetail_to_cart"
+            app:destination="@id/cartFragment" />
+
     </fragment>
 
     <fragment
@@ -190,9 +200,7 @@
         android:label="Change password"
         tools:layout="@layout/screen_change_password" />
 
-    <action
-        android:id="@+id/action_global_to_home"
-        app:destination="@id/homeFragment" />
+    <!-- ============ Chris — cart / auth / checkout screens ============ -->
 
     <fragment
         android:id="@+id/cartFragment"
@@ -200,8 +208,105 @@
         android:label="Cart"
         tools:layout="@layout/screen_cart">
         <action
-            android:id="@+id/action_cart_to_signIn"
-            app:destination="@id/adminSignInFragment" />
+            android:id="@+id/action_cart_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="za.org.seedofhope.market.ui.auth.LoginFragment"
+        android:label="Log in"
+        tools:layout="@layout/screen_login">
+        <action
+            android:id="@+id/action_login_to_forgotPassword"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_login_to_biometricSetup"
+            app:destination="@id/biometricSetupFragment" />
+        <action
+            android:id="@+id/action_login_to_cartSignedIn"
+            app:destination="@id/cartSignedInFragment"
+            app:popUpTo="@id/cartFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="za.org.seedofhope.market.ui.auth.RegisterFragment"
+        android:label="Create account"
+        tools:layout="@layout/screen_register">
+        <action
+            android:id="@+id/action_register_to_biometricSetup"
+            app:destination="@id/biometricSetupFragment" />
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="za.org.seedofhope.market.ui.auth.ForgotPasswordFragment"
+        android:label="Forgot password"
+        tools:layout="@layout/screen_forgot_password">
+        <action
+            android:id="@+id/action_forgotPassword_to_resetLinkSent"
+            app:destination="@id/resetLinkSentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resetLinkSentFragment"
+        android:name="za.org.seedofhope.market.ui.auth.ResetLinkSentFragment"
+        android:label="Reset link sent"
+        tools:layout="@layout/screen_reset_link_sent" />
+
+    <fragment
+        android:id="@+id/biometricSetupFragment"
+        android:name="za.org.seedofhope.market.ui.auth.BiometricSetupFragment"
+        android:label="Enable biometric login"
+        tools:layout="@layout/screen_biometric_setup">
+        <action
+            android:id="@+id/action_biometricSetup_to_cartSignedIn"
+            app:destination="@id/cartSignedInFragment"
+            app:popUpTo="@id/cartFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cartSignedInFragment"
+        android:name="za.org.seedofhope.market.ui.CartSignedInFragment"
+        android:label="Cart"
+        tools:layout="@layout/screen_cart_signed_in">
+        <action
+            android:id="@+id/action_cartSignedIn_to_checkout"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="za.org.seedofhope.market.ui.CheckoutFragment"
+        android:label="Checkout"
+        tools:layout="@layout/screen_checkout">
+        <action
+            android:id="@+id/action_checkout_to_orderConfirmed"
+            app:destination="@id/orderConfirmedFragment"
+            app:popUpTo="@id/cartSignedInFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderConfirmedFragment"
+        android:name="za.org.seedofhope.market.ui.OrderConfirmedFragment"
+        android:label="Order confirmed"
+        tools:layout="@layout/screen_order_confirmed">
+        <action
+            android:id="@+id/action_orderConfirmed_to_myOrders"
+            app:destination="@id/myOrdersFragment" />
+        <action
+            android:id="@+id/action_orderConfirmed_to_shop"
+            app:destination="@id/shopFragment" />
     </fragment>
 
 </navigation>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/paper"
@@ -24,6 +25,54 @@
             android:layout_marginTop="4dp"
             android:text="@string/dashboard_subtitle"
             android:textAppearance="@style/TextAppearance.SeedOfHope.Small" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_view_storefront"
+            style="@style/Widget.SeedOfHope.Button.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/dashboard_view_storefront" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_manager_tools"
+            style="@style/Widget.SeedOfHope.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dashboard_manager_tools_title"
+                    android:textAppearance="@style/TextAppearance.SeedOfHope.H3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/dashboard_manager_tools_subtitle"
+                    android:textAppearance="@style/TextAppearance.SeedOfHope.Small" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_manage_staff_accounts"
+                    style="@style/Widget.SeedOfHope.Button.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/nav_admin_users" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
 
         <LinearLayout
             android:layout_width="match_parent"

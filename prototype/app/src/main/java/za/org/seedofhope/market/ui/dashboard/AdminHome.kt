@@ -18,6 +18,19 @@ class AdminHome : Fragment(R.layout.screen_admin_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        view.findViewById<View>(R.id.btn_view_storefront).setOnClickListener {
+            findNavController().navigate(R.id.action_adminHome_to_customerHome)
+        }
+
+        val currentUser = SeedData.adminUsers.find { it.name == CurrentStaffUser.NAME }
+        if (currentUser?.role == "Manager") {
+            val managerCard = view.findViewById<View>(R.id.card_manager_tools)
+            managerCard.visibility = View.VISIBLE
+            managerCard.findViewById<View>(R.id.btn_manage_staff_accounts).setOnClickListener {
+                findNavController().navigate(R.id.action_home_to_teamList)
+            }
+        }
+
         val stat1 = view.findViewById<View>(R.id.card_stat_1)
         val stat2 = view.findViewById<View>(R.id.card_stat_2)
         val stat3 = view.findViewById<View>(R.id.card_stat_3)

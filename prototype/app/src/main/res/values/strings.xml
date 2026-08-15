@@ -63,6 +63,9 @@
     <string name="dashboard_col_total">Total</string>
     <string name="dashboard_col_status">Status</string>
     <string name="dashboard_add_product">Add a new product</string>
+    <string name="dashboard_view_storefront">View storefront</string>
+    <string name="dashboard_manager_tools_title">Manager tools</string>
+    <string name="dashboard_manager_tools_subtitle">Only visible to accounts with the manager role.</string>
 
     <!-- Product list -->
     <string name="products_title">All products</string>

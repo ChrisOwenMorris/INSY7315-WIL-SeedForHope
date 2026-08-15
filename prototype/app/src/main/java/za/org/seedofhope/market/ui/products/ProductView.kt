@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AutoCompleteTextView
 import android.widget.EditText
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import za.org.seedofhope.market.R
@@ -19,6 +20,16 @@ class ProductView : Fragment(R.layout.screen_product_view) {
         }
 
         val productId = requireArguments().getInt("productId")
+
+        // productId == NEW_PRODUCT_ID means we got here via "Add a new
+        // product" rather than tapping an existing item — show an empty,
+        // view-only form shell instead of looking one up.
+        if (productId == ProductCatalogue.NEW_PRODUCT_ID) {
+            view.findViewById<TextView>(R.id.tv_screen_title).text = getString(R.string.product_new_title)
+            view.findViewById<View>(R.id.tv_last_updated).visibility = View.GONE
+            return
+        }
+
         val product = SeedData.products.find { it.id == productId }
 
         if (product == null) {

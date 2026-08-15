@@ -70,9 +70,8 @@ class ProductDetailFragment : Fragment(R.layout.screen_product_detail) {
                 tvQty.text = qty.toString()
             }
 
-            // Cart is owned by another team member; this is presentational for now.
             view.findViewById<View>(R.id.btn_add_to_cart).setOnClickListener {
-                findNavController().navigate(R.id.action_global_to_home)
+                findNavController().navigate(R.id.action_productDetail_to_cart)
             }
         }
     }

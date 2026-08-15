@@ -23,6 +23,7 @@
             android:contentDescription="@string/nav_back" />
 
         <TextView
+            android:id="@+id/tv_screen_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -56,6 +57,7 @@
                 android:padding="16dp">
 
                 <TextView
+                    android:id="@+id/tv_last_updated"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"

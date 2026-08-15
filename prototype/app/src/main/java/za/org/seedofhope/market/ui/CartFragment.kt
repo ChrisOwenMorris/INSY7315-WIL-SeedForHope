@@ -43,20 +43,20 @@ class CartFragment : Fragment(R.layout.screen_cart) {
 
     private fun setupClickListeners(view: View) {
         val toLogin = View.OnClickListener {
-            findNavController().navigate(R.id.adminSignInFragment)
+            findNavController().navigate(R.id.action_cart_to_login)
         }
 
         view.findViewById<Button>(R.id.btn_checkout).setOnClickListener(toLogin)
         view.findViewById<Button>(R.id.btn_login).setOnClickListener(toLogin)
         view.findViewById<Button>(R.id.btn_signup).setOnClickListener(toLogin)
         view.findViewById<Button>(R.id.btn_login_header).setOnClickListener(toLogin)
-        
-        // Navigational links
-        view.findViewById<Button>(R.id.btn_nav_home).setOnClickListener {
-            findNavController().navigate(R.id.adminHomeFragment)
+
+        // Navigational links (ImageButtons, not Buttons)
+        view.findViewById<View>(R.id.btn_nav_home).setOnClickListener {
+            findNavController().navigate(R.id.homeFragment)
         }
-        view.findViewById<Button>(R.id.btn_nav_shop).setOnClickListener {
-            findNavController().navigate(R.id.productCatalogueFragment)
+        view.findViewById<View>(R.id.btn_nav_shop).setOnClickListener {
+            findNavController().navigate(R.id.shopFragment)
         }
     }
 }

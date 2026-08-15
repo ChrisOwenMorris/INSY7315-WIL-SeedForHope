@@ -20,6 +20,13 @@ class ProductCatalogue : Fragment(R.layout.screen_product_catalogue) {
         view.findViewById<TextView>(R.id.tv_product_count).text =
             getString(R.string.products_count, SeedData.products.size)
 
+        view.findViewById<View>(R.id.btn_add_product).setOnClickListener {
+            findNavController().navigate(
+                R.id.action_productCatalogue_to_productView,
+                bundleOf("productId" to NEW_PRODUCT_ID)
+            )
+        }
+
         val recyclerView = view.findViewById<RecyclerView>(R.id.rv_products)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = ProductAdapter(SeedData.products) { product ->
@@ -28,5 +35,11 @@ class ProductCatalogue : Fragment(R.layout.screen_product_catalogue) {
                 bundleOf("productId" to product.id)
             )
         }
+    }
+
+    companion object {
+        // Sentinel productId that tells ProductView to render its "add a new
+        // product" state instead of looking up an existing product.
+        const val NEW_PRODUCT_ID = -1
     }
 }
